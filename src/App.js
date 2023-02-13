@@ -1,14 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Web3 from "web3";
 import logo from "./logo.png";
 import "./App.css";
+// import { Web3Storage } from "web3.storage";
 // JSON containing ABI and Bytecode of compiled smart contracts
 import contractJson from "./artifacts/contracts/Greeter.sol/Greeter.json";
 
 function App() {
   const [mmStatus, setMmStatus] = useState("Not connected!");
+  const [isConnected, setIsConnected] = useState(false);
   const [accountAddress, setAccountAddress] = useState(undefined);
   const [displayMessage, setDisplayMessage] = useState("");
   const [web3, setWeb3] = useState(undefined);
@@ -49,6 +51,7 @@ function App() {
         });
         // Get address of the account
         setAccountAddress(accounts[0]);
+        setIsConnected(!isConnected);
       } catch (error) {
         console.log("Error: ", error);
       }
@@ -88,13 +91,13 @@ function App() {
           : mmStatus}
       </div>
       <hr />
-      <h1 className="text-center text-4xl font-bold mt-6">
+      <h1 className="text-center text-4xl font-bold mt-8">
         create-fvm-dapp template 🚀
       </h1>
       {/* Connect to Metamask */}
       <center>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mt-6 mb-6"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mt-8 mb-6"
           onClick={connectWallet}
         >
           Connect wallet
@@ -112,14 +115,14 @@ function App() {
         />
         <button
           className="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded ml-3"
-          onClick={send}
+          onClick={isConnected && send}
         >
           Send
         </button>
         {/* Receive message */}
         <button
           className="text-center  bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded ml-3"
-          onClick={receive}
+          onClick={isConnected && receive}
         >
           Receive
         </button>
@@ -154,7 +157,7 @@ function App() {
       {/* Footer FVM content */}
       <footer className="footer">
         <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-xs sm:text-sm text-black">
+        <p className="mt-4 text-xs sm:text-sm text-black">
           Learn more about Filecoin Virtual Machine {""}
           <a
             className="text-blue-500 no-underline hover:underline hover:text-blue-400"
