@@ -2,7 +2,12 @@ const hre = require("hardhat");
 
 async function main() {
   const Greeter = await hre.ethers.getContractFactory("Greeter");
-  // const priorityFee = await hre.ethers.provider.send("eth_maxPriorityFeePerGas", []);
+
+  // "HardhatError: HH303: Unrecognized task callRPC"
+  // const priorityFee = await hre.run('callRPC', {
+  //   method: 'eth_maxPriorityFeePerGas',
+  //   params: [],
+  // });
 
   const greeter = await Greeter.deploy({
     maxPriorityFeePerGas: 199992,
