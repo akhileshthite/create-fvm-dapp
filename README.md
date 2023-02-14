@@ -15,7 +15,7 @@ A full-stack starter template with React & Hardhat to develop, deploy, and test 
 
 ## 🛠️ Installation guide
 
-### create-fvm-dapp command
+### ⌛️ create-fvm-dapp command
 
 Open up your terminal (or command prompt) and type the following command:
 
@@ -26,7 +26,7 @@ npx create-fvm-dapp <your-dapp-name>
 cd <your-dapp-name>
 ```
 
-### Private key
+### 🔑 Private key
 
 Ensure you create a `.env` file in the `root` directory. Then paste your [Metamask private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) in `.env` with the variable name `PRIVATE_KEY` as follows:
 
@@ -34,7 +34,7 @@ Ensure you create a `.env` file in the `root` directory. Then paste your [Metama
 PRIVATE_KEY=1234
 ```
 
-### Compile
+### ⚙️ Compile
 
 Now, you can write your contracts in `./contracts/` directory, replace `Greeter.sol` with `<your-contracts>.sol` file. To write tests, go to `./test` directory and create `<your-contracts>.test.js`.
 
@@ -49,7 +49,7 @@ After successful compilation, the artifacts directory will be created in `./src/
 
 Please make the changes while [Importing](https://github.com/akhileshthite/create-fvm-dapp/blob/670b4561e7da5db6faa121f2664c427b8427da60/src/App.js#L9) the JSON in `./src/app.js`.
 
-### Deploy
+### ⛓️ Deploy
 
 Before deploying the smart contracts, please make sure you have a `hyperspace testnet` in your Metamask wallet with sufficient funds, follow this [quickstart](https://github.com/filecoin-project/testnet-hyperspace#quickstart) guide if you do not have one.
 
@@ -61,7 +61,13 @@ For deploying the smart contracts to FEVM network, type the following command:
 npx hardhat run --network hyperspace scripts/deploy.js
 ```
 
-### React client
+Copy-paste the deployed contract address [here](https://github.com/akhileshthite/create-fvm-dapp/blob/27af748b814f3e1448db710af03f39d12464cc20/src/App.js#L32)
+
+```sh
+<your-contract> deployed to: 0x...
+```
+
+### 💻 React client
 
 start react app
 
