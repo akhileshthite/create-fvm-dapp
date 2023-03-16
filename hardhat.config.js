@@ -20,6 +20,11 @@ module.exports = {
       url: "https://api.hyperspace.node.glif.io/rpc/v1",
       accounts: [PRIVATE_KEY ?? "undefined"],
     },
+    filecoin_mainnet: {
+      chainId: 314,
+      url: "https://api.node.glif.io",
+      accounts: [PRIVATE_KEY ?? "undefined"],
+    },
   },
   paths: {
     sources: "./contracts",
