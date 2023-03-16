@@ -32,7 +32,7 @@ npx create-fvm-dapp <your-dapp-name>
 cd <your-dapp-name>
 ```
 
-> If you encounter any errors during package installation, please ensure that your `node.js` and `npm` versions are up-to-date.
+> ⚠️ If you encounter any errors during package installation, please ensure that your `node.js` and `npm` versions are up-to-date.
 
 ### 🔑 Private key
 
@@ -72,7 +72,7 @@ npx hardhat run --network hyperspace scripts/deploy.js
 Copy-paste the deployed contract address [here](https://github.com/akhileshthite/create-fvm-dapp/blob/27af748b814f3e1448db710af03f39d12464cc20/src/App.js#L32)
 
 ```sh
-<your-contract> deployed to: 0x...
+📜 Contract deployed to: 0x...
 ```
 
 ### 💻 React client
