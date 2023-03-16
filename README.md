@@ -32,6 +32,8 @@ npx create-fvm-dapp <your-dapp-name>
 cd <your-dapp-name>
 ```
 
+> If you encounter any errors during package installation, please ensure that your `node.js` and `npm` versions are up-to-date.
+
 ### 🔑 Private key
 
 Ensure you create a `.env` file in the `root` directory. Then paste your [Metamask private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) in `.env` with the variable name `PRIVATE_KEY` as follows:
