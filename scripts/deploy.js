@@ -15,7 +15,7 @@ async function main() {
 
   await greeter.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("📜 Contract deployed to:", greeter.address);
 }
 
 main()
