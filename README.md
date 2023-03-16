@@ -67,6 +67,8 @@ For deploying the smart contracts to FEVM network, type the following command:
 
 ```sh
 npx hardhat run --network hyperspace scripts/deploy.js
+
+# mainnet: npx hardhat run --network filecoin_mainnet scripts/deploy.js
 ```
 
 Copy-paste the deployed contract address [here](https://github.com/akhileshthite/create-fvm-dapp/blob/27af748b814f3e1448db710af03f39d12464cc20/src/App.js#L32)
