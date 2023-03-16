@@ -1,6 +1,6 @@
 {
   "name": "create-fvm-dapp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A full-stack starter template with React & Hardhat to develop, deploy, and test Solidity smart contracts on the FEVM network.",
   "bin": "./bin/index.js",
   "author": "Akhilesh Thite",
